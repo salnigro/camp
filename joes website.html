@@ -45,273 +45,37 @@
 
   <div style="margin-top: -28px;">
     
-    <div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title"></h1>
-  </header>
-
-  <article class="post-content">
     <div class="jumbotron">
   <div class="container">
-    <h1>Cascading Style Sheets (CSS)</h1>
-    <p>Add style to your pages. Control the way things look and react to a variety of screen sizes.</p>
+    <h1>Camp for Coders 2015</h1>
+    <p>Improve your general software literacy as we create interactive and visual computational artifacts. Learn the syntax and concepts of software (variables, functions, object oriented programming). We will write short prototypical pieces of software that explore photography, drawing, animation, and presentation.</p>
   </div>
 </div>
-
 <div class="container">
-  <h2>Where We Have Been</h2>
-  <p>Yesterday we made some basic pages, mostly having to do with what you would recommend for a day's worth of activity to a Kansas City tourist.</p>
-  <h2>Where We Are Going</h2>
-  <p>Using Cascading Style Sheets, we can take a page that looks like <strong><a href="site1/visitkc.html" target="_blank">this</a></strong>, and turn it into <strong><a href="site2/visitkc.html" target="_blank">this</a></strong>.</p>
-  <h2>Let's Do This</h2>
-  <p>First of all, the HTML is very basic. I even added some white-space to spatially separate my sections.</p>
-  <code><pre class="no-select">&lt;!DOCTYPE html&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-&lt;head&gt;
-    &lt;title&gt;Visit KC&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-  &lt;h1&gt;Spend a Day in Kansas City&lt;/h1&gt;
-  
-  &lt;h2&gt;Breakfast at YJ's&lt;/h2&gt;
-  &lt;img src="img/yjs.jpg" /&gt;
-  &lt;p&gt;Never have I had a better breakfast. This eclectic diner featured on &lt;a href="http://www.dinersdriveinsdiveslocations.com/yjs-snack-bar-missouri.html" target="_blank"&gt;Diners Drive-Ins & Dives&lt;/a&gt; is appropriately located in the Crossroads District downtown.&lt;/p&gt;
-  
-  &lt;h2&gt;A Morning Stroll&lt;/h2&gt;
-  &lt;p&gt;Visit the Plaza and take a walk down the Brush Creek board walk. If you're here the right time of year, you'll catch a number of great local events: the plaza lighting, the dragon boats, and the plaza art fair. Follow the creek east to the lawn of the Nelson Art Gallery.&lt;/p&gt;
-  &lt;img src="img/brushcreek.jpg" /&gt;
-  
-  &lt;h2&gt;Museum Tour&lt;/h2&gt;
-  &lt;img src="img/nelson.jpg" /&gt;
-  &lt;p&gt;The Nelson Atkins Museum of Art is a world class museum featuring original works of Monet, Picasso, and Van Gogh to name a few.&lt;/p&gt;
-  
-  &lt;h2&gt;Lunch&lt;/h2&gt;
-  &lt;p&gt;Definitely Kansas City Joe's Barbeque - formerly Oklahoma Joe's. Get the Z-Man Sandwich.&lt;/p&gt;
-  &lt;img src="img/zman.jpg" /&gt;
-  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/XYk6Ksi-x8U" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-  
-  &lt;h2&gt;Ball Game&lt;/h2&gt;
-  &lt;p&gt;Home of the...&lt;/p&gt;
-  &lt;img src="img/royals.jpg" /&gt;
-  &lt;img src="img/chiefs.jpg" /&gt;
-  &lt;img src="img/sporting.jpg" /&gt;
-  
-  &lt;h2&gt;Dinner&lt;/h2&gt;
-  &lt;p&gt;More Barbeque - this time Fiorella's Jack Stack in the freight house district.&lt;/p&gt;
-  &lt;img src="img/jackstack1.jpg" /&gt;
-  &lt;img src="img/jackstack2.jpg" /&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</pre></code>
-  <p>Next, I use <code>&lt;div&gt;</code> tags to further distinguish my code sections. More importantly, I will use this new structure to define rules in my stylesheet.</p>
-  <code><pre class="no-select">&lt;!DOCTYPE html&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-&lt;head&gt;
-  &lt;title&gt;Visit KC&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-  &lt;div class="main"&gt;
-
-    &lt;h1&gt;Spend a Day in Kansas City&lt;/h1&gt;
-
-    &lt;div class="container"&gt;
-
-      &lt;h2&gt;Breakfast at YJ's&lt;/h2&gt;
-      &lt;div class="row"&gt;
-        &lt;div class="col-md-6"&gt;
-          &lt;img src="img/yjs.jpg" /&gt;
-        &lt;/div&gt;
-        &lt;div class="col-md-6"&gt;
-          &lt;p&gt;Never have I had a better breakfast. This eclectic diner featured on &lt;a href="http://www.dinersdriveinsdiveslocations.com/yjs-snack-bar-missouri.html" target="_blank"&gt;Diners Drive-Ins & Dives&lt;/a&gt; is appropriately located in the Crossroads District downtown.&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;h2&gt;A Morning Stroll&lt;/h2&gt;
-      &lt;div class="row"&gt;
-        &lt;div class="col-md-6"&gt;
-          &lt;p&gt;Visit the Plaza and take a walk down the Brush Creek board walk. If you're here the right time of year, you'll catch a number of great local events: the plaza lighting, the dragon boats, and the plaza art fair. Follow the creek east to the lawn of the Nelson Art Gallery.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class="col-md-6"&gt;
-          &lt;img src="img/brushcreek.jpg" /&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;h2&gt;Museum Tour&lt;/h2&gt;
-      &lt;div class="row"&gt;
-        &lt;div class="col-md-6"&gt;
-          &lt;img src="img/nelson.jpg" /&gt;
-        &lt;/div&gt;
-        &lt;div class="col-md-6"&gt;
-          &lt;p&gt;The Nelson Atkins Museum of Art is a world class museum featuring original works of Monet, Picasso, and Van Gogh to name a few.&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;h2&gt;Lunch&lt;/h2&gt;
-      &lt;div class="row"&gt;
-        &lt;img src="img/zman.jpg" /&gt;
-      &lt;/div&gt;
-      &lt;div class="row"&gt;
-        &lt;div class="col-md-6"&gt;
-          &lt;p&gt;Definitely Kansas City Joe's Barbeque - formerly Oklahoma Joe's. Get the Z-Man Sandwich.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class="col-md-6"&gt;
-          &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/XYk6Ksi-x8U" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;h2&gt;Ball Game&lt;/h2&gt;
-      &lt;div class="row"&gt;
-        &lt;p&gt;Home of the...&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="row"&gt;
-        &lt;div class="col-md-4"&gt;
-          &lt;img src="img/royals.jpg" /&gt;
-        &lt;/div&gt;
-        &lt;div class="col-md-4"&gt;
-          &lt;img src="img/chiefs.jpg" /&gt;
-        &lt;/div&gt;
-        &lt;div class="col-md-4"&gt;
-          &lt;img src="img/sporting.jpg" /&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;h2&gt;Dinner&lt;/h2&gt;
-      &lt;div class="row"&gt;
-        &lt;p&gt;More Barbeque - this time Fiorella's Jack Stack in the freight house district.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="row"&gt;
-        &lt;div class="col-md-6"&gt;
-          &lt;img src="img/jackstack1.jpg" /&gt;
-        &lt;/div&gt;
-        &lt;div class="col-md-6"&gt;
-          &lt;img src="img/jackstack2.jpg" /&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    
-    &lt;/div&gt;
-
-  &lt;/div&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</pre></code>
-  <h2>Enter the Style Sheet</h2>
-  <p>I always name my first stylesheet <code>main.css</code> and of course I put it in the <code>css</code> folder.</p>
-  <p>Next, I link to the stylesheet in my HTML page. This is necessary in order to load the styles for your site.</p>
-  <code><pre class="no-select">&lt;head&gt;
-  &lt;title&gt;Visit KC&lt;/title&gt;
-  <strong class="red">&lt;link href="css/main.css" rel="stylesheet" /&gt;</strong>
-&lt;/head&gt;</pre></code>
-  <h2>Stylesheet</h2>
-  <code><pre class="no-select">body {
-    font-size: 25px;
-    font-family: sans-serif;
-    background: url("../img/background.jpg") no-repeat center center fixed;
-    background-size: cover;
-    margin: 0;
-}
-
-img {
-    max-width: 100%;
-}
-
-p {
-    -webkit-margin-before: 0px;
-}
-
-h1.title {
-    font-family: 'Hanged-Letters';
-    font-size: 3em;
-    text-align: center;
-}
-
-.container {
-    background-color: white;
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1%;
-    padding-right: 1%;
-}
-
-.row {
-}
-
-.col-md-4 {
-    display: inline-block;
-    width: 29.3%;
-    padding: 2%;
-    vertical-align: top;
-}
-
-.col-md-6 {
-    display: inline-block;
-    width: 46%;
-    padding: 2%;
-    vertical-align: top;
-}
-
-.wide {
-    width: 100%;
-}
-
-/* https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
-}
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* http://www.labnol.org/internet/embed-responsive-google-maps/28333/ */
-.map-container {
-    position: relative;
-    padding-bottom: 75%;
-    height: 0;
-    overflow: hidden;
-}
-.map-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .col-md-4 {
-        display: block;
-        width: 100%;
-    }
-
-    .col-md-6 {
-        display: block;
-        width: 100%;
-    }
-}
-
-@font-face {
-    font-family: 'Hanged-Letters';
-    src: url('../font/Hanged-Letters.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}</pre></code>
-</div>
-  </article>
-
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Processing 2D</h2>
+      <p>June 1 - 11, Mon - Thur</p>
+      <p>Sketch and animate 2D graphics in the Processing language. An introduction or review of programming fundamentals: variables, functions, and object oriented design.</p>
+      <p><a class="btn btn-primary btn-lg" href="Processing2D/" role="button">Completed</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Pixel Processing</h2>
+      <p>June 15 - 18</p>
+      <p>Explore programmatic manipulation of images pixel by pixel. Apply photo effects: blending, transformation, tint, transparency, opacity, hue, saturation, brightness, erosion, dilation, posterization, greyscale, color inversion.</p>
+      <p><a class="btn btn-primary btn-lg" href="PixelProcessing/" role="button">Completed</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Web Design</h2>
+      <p>June 22 - 25</p>
+      <p>Learn or review the basics of web design in this crash course on HTML, CSS, and Javascript.  Regard the challenge of designing content for a variety of devices and platforms in what is commonly referred to as responsive web design.</p>
+      <p><a class="btn btn-primary btn-lg" href="WebDesign/" role="button">Begin</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <p>Note: This is companion material used during attendance of the event. It is meant in no way to be a complete reference for building and completing related projects. Feel free to email jwclark at rockhursths.edu with any questions, especially the campers who work on related projects outside of this summer session.</p>
+  </div>
 </div>
 
   
